@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>NEXO PLAY</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+  <div class="logo">Nexo<span>play</span></div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="catagolo.html">Catálogo</a></li>
+      <li><a href="#">Web</a></li>
+    </ul>
+  </nav>
+  <div class="actions">
+    <input type="text" placeholder="Buscar" class="search" />
+    <button class="btn-login">Iniciar sesión</button>
+  </div>
+</header>
+
+<main class="content">
+  <!-- HERO PRINCIPAL -->
+  <section class="hero">
+    
+    <div class="hero-text">
+      <h1>MATENIMIENTO PROGRAMADO</h1>
+      
+      
+    </div>
+  </section>
+
+  
+
+   
+  </section>
+
+  
+
+
+
+<footer class="footer">
+  <p>NEXO TV INC © 2025 — TRGLIX CORP</p>
+</footer>
+
+<script>
+const modal = document.getElementById('videoModal');
+const closeModal = document.getElementById('closeModal');
+const cards = document.querySelectorAll('.video-card');
+
+cards.forEach(c => {
+  c.addEventListener('click', () => {
+    modal.classList.remove('hidden');
+  });
+});
+
+closeModal.addEventListener('click', () => {
+  modal.classList.add('hidden');
+});
+</script>
+
+</body>
+</html>
