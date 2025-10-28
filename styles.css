@@ -8,7 +8,7 @@
   --color-hover: #007bff;
   --color-dark: #011029;
   --transition: 0.3s ease;
-  --shadow: 0 4px 20px rgba(0,0,0,0.4);
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   --radius: 14px;
 }
 
@@ -48,7 +48,7 @@ body {
   color: var(--color-accent);
 }
 .logo .play {
-  color: white;
+  color: #fff;
 }
 
 .navbar nav a {
@@ -70,15 +70,15 @@ body {
   padding: 6px 10px;
   border-radius: var(--radius);
   border: none;
-  background: rgba(255,255,255,0.1);
-  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
   outline: none;
 }
 .user-controls button {
   padding: 8px 14px;
   border: none;
   background: var(--color-accent);
-  color: white;
+  color: #fff;
   border-radius: var(--radius);
   cursor: pointer;
   transition: var(--transition);
@@ -106,9 +106,9 @@ body {
   position: absolute;
   bottom: 60px;
   left: 60px;
-  color: white;
+  color: #fff;
   z-index: 10;
-  text-shadow: 0 4px 10px rgba(0,0,0,0.7);
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
 }
 .hero-content h1 {
   font-size: 3em;
@@ -124,7 +124,7 @@ body {
   padding: 12px 24px;
   border-radius: var(--radius);
   cursor: pointer;
-  color: white;
+  color: #fff;
   font-weight: bold;
   transition: var(--transition);
 }
@@ -141,12 +141,15 @@ body {
 .row-header h2 {
   margin-bottom: 20px;
   font-size: 1.8em;
-  color: white;
+  color: #fff;
 }
 .carousel-wrap {
   overflow-x: auto;
   overflow-y: hidden;
   scrollbar-width: none;
+}
+.carousel-wrap::-webkit-scrollbar {
+  display: none;
 }
 .carousel {
   display: flex;
@@ -200,7 +203,7 @@ body {
 .video-info h3 {
   font-size: 1em;
   margin-bottom: 6px;
-  color: white;
+  color: #fff;
 }
 .video-info p {
   font-size: 0.9em;
@@ -220,7 +223,7 @@ body {
 .modal {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0, 0, 0, 0.85);
   display: none;
   align-items: center;
   justify-content: center;
@@ -243,7 +246,8 @@ body {
   overflow: hidden;
   box-shadow: var(--shadow);
 }
-.video-player, .yt-frame {
+.video-player,
+.yt-frame {
   width: 100%;
   height: 500px;
   display: block;
@@ -254,7 +258,7 @@ body {
   top: 10px;
   right: 14px;
   font-size: 26px;
-  color: white;
+  color: #fff;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -271,10 +275,11 @@ body {
 footer {
   text-align: center;
   padding: 30px;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   color: #aaa;
   font-size: 0.9em;
 }
+
 /* ==========================
    🎧 MODO RADIO / AUDIO
    ========================== */
@@ -285,7 +290,7 @@ footer {
   padding: 25px;
   border-radius: 16px;
   text-align: center;
-  box-shadow: 0 0 25px rgba(0,0,0,0.6);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
 }
 
 .audio-player {
@@ -295,3 +300,4 @@ footer {
   background: #0a214a;
   outline: none;
 }
+
