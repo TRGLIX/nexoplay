@@ -1,0 +1,297 @@
+/* ==========================
+   🌐 NEXOPLAY ESTILOS GLOBALES
+   ========================== */
+:root {
+  --color-bg: #020b1b;
+  --color-accent: #1e90ff;
+  --color-text: #e0e0e0;
+  --color-hover: #007bff;
+  --color-dark: #011029;
+  --transition: 0.3s ease;
+  --shadow: 0 4px 20px rgba(0,0,0,0.4);
+  --radius: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  overflow-x: hidden;
+}
+
+/* ==========================
+   🔝 NAVBAR
+   ========================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+.logo .nexo {
+  color: var(--color-accent);
+}
+.logo .play {
+  color: white;
+}
+
+.navbar nav a {
+  margin: 0 12px;
+  color: #ccc;
+  text-decoration: none;
+  transition: var(--transition);
+}
+.navbar nav a:hover {
+  color: var(--color-accent);
+}
+
+.user-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.user-controls input {
+  padding: 6px 10px;
+  border-radius: var(--radius);
+  border: none;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  outline: none;
+}
+.user-controls button {
+  padding: 8px 14px;
+  border: none;
+  background: var(--color-accent);
+  color: white;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.user-controls button:hover {
+  background: var(--color-hover);
+}
+
+/* ==========================
+   🦸 HERO
+   ========================== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+.hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+}
+.hero-content {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  color: white;
+  z-index: 10;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.7);
+}
+.hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+.hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+.btn-hero {
+  background: var(--color-accent);
+  border: none;
+  padding: 12px 24px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  transition: var(--transition);
+}
+.btn-hero:hover {
+  background: var(--color-hover);
+}
+
+/* ==========================
+   📺 CARRUSEL DE CANALES
+   ========================== */
+.row {
+  padding: 40px 60px;
+}
+.row-header h2 {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  color: white;
+}
+.carousel-wrap {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+.carousel {
+  display: flex;
+  gap: 20px;
+}
+.channel-card {
+  flex: 0 0 280px;
+  height: 160px;
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius);
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+  box-shadow: var(--shadow);
+}
+.channel-card:hover {
+  transform: scale(1.08);
+}
+
+/* ==========================
+   🎬 CATÁLOGO
+   ========================== */
+.content {
+  padding: 40px 60px;
+}
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+}
+.video-card {
+  background: var(--color-dark);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.video-card:hover {
+  transform: scale(1.06);
+  box-shadow: var(--shadow);
+}
+.video-card img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+}
+.video-info {
+  padding: 10px 12px;
+}
+.video-info h3 {
+  font-size: 1em;
+  margin-bottom: 6px;
+  color: white;
+}
+.video-info p {
+  font-size: 0.9em;
+  color: #a8a8a8;
+}
+.badge {
+  background: var(--color-accent);
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 0.8em;
+  margin-left: 6px;
+}
+
+/* ==========================
+   🎥 MODAL DE VIDEO
+   ========================== */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal.active {
+  display: flex;
+  animation: fadeIn 0.4s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.modal-content {
+  position: relative;
+  width: 80%;
+  max-width: 900px;
+  background: #000;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.video-player, .yt-frame {
+  width: 100%;
+  height: 500px;
+  display: block;
+  border: none;
+}
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 26px;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  transition: var(--transition);
+}
+.modal-close:hover {
+  color: var(--color-accent);
+}
+
+/* ==========================
+   ⚙️ FOOTER
+   ========================== */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: rgba(0,0,0,0.4);
+  color: #aaa;
+  font-size: 0.9em;
+}
+/* ==========================
+   🎧 MODO RADIO / AUDIO
+   ========================== */
+.modal-content.audio-mode {
+  width: 400px;
+  max-width: 90%;
+  background: #001b3d;
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0,0,0,0.6);
+}
+
+.audio-player {
+  width: 100%;
+  height: 60px;
+  border-radius: 10px;
+  background: #0a214a;
+  outline: none;
+}
