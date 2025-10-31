@@ -28,7 +28,7 @@ const videoSources = {
   2: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // enlace normal de YouTube
   3: "https://www.youtube.com/embed/N3OW3gtleeo",    // enlace embed de YouTube
   4: "https://www.w3schools.com/html/movie.mp4",
-  5: "https://www.youtube.com/watch?v=N3OW3gtleeo",
+  5: "https://youtu.be/Gn6oWsdCVq8",
   6: "https://stream.zeno.fm/koskyrpsbpsuv",         // 🎧 Radio en directo
   7: "https://www.youtube.com/embed/TsFDZG3Nw7M",
   8: "https://www.youtube.com/watch?v=ysz5S6PUM-U",
